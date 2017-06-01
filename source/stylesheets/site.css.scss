@@ -7,7 +7,8 @@ body {
   color: #222;
   font-family: 'Overpass', sans-serif;
   font-weight: 600;
-  padding: 10rem 1.5rem;
+  padding: 0;
+  margin: 0;
   font-size: 1.5rem;
 }
 
@@ -95,11 +96,49 @@ a.btn:after {
   transition: all 0.4s;
 }
 
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 2.5rem;
+    -webkit-margin-start: 1rem;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 1rem;
+}
+
+table {
+  margin-bottom: 2.5rem;
+}
+
+hr {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  border-style: solid;
+  border-width: 4px;
+}
+
 
 // HOME
 
-.intro-container, .intro img {
+.intro-container, .intro-container img, .what-i-do-container {
   width: 100%;
   max-width: 40rem;
   margin: 0 auto 5rem auto;
+}
+
+.intro-container, .what-i-do-container {
+  padding: 10rem 1.5rem;
+}
+
+.what-i-do-container p {
+  padding-top: 0;
+}
+
+.what-i-do-container a.btn {
+  margin-top: 1rem;
+}
+
+
+.role {
+  padding-left: 2.5rem;
 }
