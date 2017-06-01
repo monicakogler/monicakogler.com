@@ -1,24 +1,105 @@
+html {
+  font-size: 12px;
+}
+
 body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+  background-image: linear-gradient(18deg, rgba(246,240,232,0.50) 0%, rgba(255,255,255,0.50) 100%);
+  color: #222;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 600;
+  padding: 10rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 2.5rem 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 8rem;
+  line-height: 8rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h6 {
+  font-size: 1.1675rem;
+  line-height: 2rem;
+  letter-spacing: 0.0875rem;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 2.5rem;
 }
 
 a {
-  color: rgba(#000, 0.7);
-
+  color: rgba(#222, 0.7);
+  text-decoration: none;
+  transition: all 0.4s;
   &:focus,
   &:hover {
-    color: rgba(#000, 0.6);
+    color: rgba(#222, 0.6);
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+a.btn {
+  color: #fff;
+  background: #222;
+  height: 6rem;
+  width: 100%;
+  text-align: center;
+  display: block;
+  line-height: 6rem;
+  margin-bottom: 2.5rem;
+  outline: 1px solid transparent;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+a.btn:hover {
+  -webkit-transform: rotateY(20deg);
+  -moz-transform: rotateY(20deg);
+  -ms-transform: rotateY(20deg);
+  transform: rotateY(20deg);
+  background: #444;
+}
+
+a.btn:after {
+  width: 21%;
+  height: 100%;
+  left: -20%;
+  top: 0;
+  background: #333;
+  -webkit-transform-origin: 100% 0%;
+  -webkit-transform: rotateY(-90deg);
+  -moz-transform-origin: 100% 0%;
+  -moz-transform: rotateY(-90deg);
+  -ms-transform-origin: 100% 0%;
+  -ms-transform: rotateY(-90deg);
+  transform-origin: 100% 0%;
+  transform: rotateY(-90deg);
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+
+// HOME
+
+.intro-container, .intro img {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto 5rem auto;
 }
