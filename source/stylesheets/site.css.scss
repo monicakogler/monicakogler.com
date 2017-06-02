@@ -44,7 +44,9 @@ p {
 a {
   color: rgba(#222, 0.7);
   text-decoration: none;
-  transition: all 0.4s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
   &:focus,
   &:hover {
     color: rgba(#222, 0.6);
@@ -53,7 +55,7 @@ a {
 
 a.btn {
   color: #fff;
-  background: #222;
+  background: #333;
   height: 6rem;
   width: 100%;
   text-align: center;
@@ -71,15 +73,15 @@ a.btn:hover {
   -moz-transform: rotateY(20deg);
   -ms-transform: rotateY(20deg);
   transform: rotateY(20deg);
-  background: #444;
+  background: #222;
 }
 
 a.btn:after {
-  width: 21%;
+  width: 20%;
   height: 100%;
   left: -20%;
   top: 0;
-  background: #333;
+  background: #111;
   -webkit-transform-origin: 100% 0%;
   -webkit-transform: rotateY(-90deg);
   -moz-transform-origin: 100% 0%;
@@ -91,19 +93,20 @@ a.btn:after {
   content: '';
   position: absolute;
   z-index: -1;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 2.5rem;
-    -webkit-margin-start: 1rem;
-    -webkit-margin-end: 0;
-    -webkit-padding-start: 1rem;
+  display: block;
+  list-style-type: disc;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 2.5rem;
+  -webkit-margin-start: 1rem;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 1rem;
+  line-height: 2.5rem;
 }
 
 table {
@@ -117,6 +120,11 @@ hr {
   border-width: 4px;
 }
 
+.content {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 
 // HOME
 
@@ -127,7 +135,8 @@ hr {
 }
 
 .intro-container, .what-i-do-container {
-  padding: 10rem 1.5rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 .what-i-do-container p {
@@ -141,4 +150,15 @@ hr {
 
 .role {
   padding-left: 2.5rem;
+}
+
+@media only screen and (max-width: 492px) {
+    td.role, td.year {
+      display: inline-block;
+      padding-left: 0;
+      width: 100%;
+    }
+    td.year {
+      padding-top: 1rem;
+    }
 }
