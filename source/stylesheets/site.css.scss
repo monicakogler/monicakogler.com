@@ -128,22 +128,22 @@ hr {
 
 // HOME
 
-.intro-container, .intro-container img, .what-i-do-container {
+.intro, .intro img, .what-i-do {
   width: 100%;
   max-width: 40rem;
   margin: 0 auto 5rem auto;
 }
 
-.intro-container, .what-i-do-container {
+.intro, .what-i-do {
   padding-top: 10rem;
   padding-bottom: 10rem;
 }
 
-.what-i-do-container p {
+.what-i-do p {
   padding-top: 0;
 }
 
-.what-i-do-container a.btn {
+.what-i-do a.btn {
   margin-top: 1rem;
 }
 
