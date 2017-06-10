@@ -25,7 +25,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
   font-size: 8rem;
-  line-height: 8rem;
+  line-height: 1;
+  @media only screen and (max-width: 768px) {
+    font-size: 5rem;
+  }
 }
 
 h2 {
@@ -78,6 +81,10 @@ a.btn:hover {
   background: #222;
 }
 
+a.btn:focus {
+  background: #222;
+}
+
 a.btn:after {
   width: 20%;
   height: 100%;
@@ -95,9 +102,9 @@ a.btn:after {
   content: '';
   position: absolute;
   z-index: -1;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: ease-in 0.4s;
+  -moz-transition: ease-in 0.4s;
+  transition: ease-in 0.4s;
 }
 
 ul, menu, dir {
@@ -122,8 +129,10 @@ table {
 hr {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
-  border-style: solid;
-  border-width: 0.25rem;
+  border-top: solid 0.3rem;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
 }
 
 .content {
@@ -161,18 +170,14 @@ hr {
   height: 5rem;
   width: 100%;
   z-index: 999;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all ease-in 0.3s;
+  -moz-transition: all ease-in 0.3s;
+  transition: all ease-in 0.3s;
 }
 
 @media only screen and (max-width: 860px) {
-  // #header.active {
-  //   background: #fff;
-  //   box-shadow: 0 0 8px 0 rgba(34,34,34,0.20);
-  // }
-  #header {
-    background: #fff;
+  #header.active {
+    background: rgba(255,255,255,0.99);
     box-shadow: 0 0 8px 0 rgba(34,34,34,0.20);
   }
   #logo, #menu {
@@ -300,6 +305,17 @@ hr {
     &.web-work {
       width: 100%;
       border-radius: 0.2rem;
+    }
+    &.web-work.half {
+      width: calc(100% - 1.25rem);
+      max-width: 28rem;
+      &:nth-child(odd) {
+        margin-right: 0.625rem;
+      }
+      &:nth-child(even) {
+        margin-left: 0.625rem;
+        margin-bottom: 5rem !important;
+      }
     }
     &.mobile-work {
       max-width: 18rem;
