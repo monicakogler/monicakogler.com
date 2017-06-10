@@ -5,6 +5,8 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+activate :directory_indexes
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -31,11 +33,28 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+FILE_EXTENSION = /\.(\w+)$/
+
+helpers do
+  def current_link_to(*arguments, aria_current: "page", **options, &block)
+    if block_given?
+      text = capture(&block)
+      path = arguments[0]
+    else
+      text = arguments[0]
+      path = arguments[1]
+    end
+
+    link_options = options
+    current_path = current_page.url.to_s.gsub(FILE_EXTENSION, "")
+
+    if current_path.include? path
+      link_options.merge!("aria-current" => aria_current)
+    end
+
+    link_to(text, path, link_options)
+  end
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings

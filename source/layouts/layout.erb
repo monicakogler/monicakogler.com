@@ -13,11 +13,11 @@
     <script>
       /* Set the width of the side navigation to 250px */
       function openNav() {
-        document.getElementById('mySidenav').style.width = '30rem';
+        document.getElementById('sidenav').style.width = '30rem';
       }
       /* Set the width of the side navigation to 0 */
       function closeNav() {
-        document.getElementById('mySidenav').style.width = '0';
+        document.getElementById('sidenav').style.width = '0';
       }
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -38,20 +38,20 @@
       <a href='/' id='logo'><img src='images/logo@2x.png' width='48' height='48'/></a>
       <span onclick='openNav()' id='menu'><img src='images/menu.svg' width='48' height='48' /></span>
     </div>
-    <div id='mySidenav' class='sidenav'>
+    <nav id='sidenav' class='sidenav'>
       <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'><img src='images/close.svg' width='48' height='48' /></a>
-      <a href='/'>Home</a>
+      <%= link_to 'Home', '/' %>
       <h6>For clients</h6>
-      <a href='/twist'>Twist</a>
-      <a href='/baggu'>BAGGU</a>
-      <a href='/btr-energy'>BTR Energy</a>
-      <a href='/transcriptic'>Transcriptic</a>
+      <%= current_link_to 'Twist', '/twist' %>
+      <%= current_link_to 'Baggu', '/baggu' %>
+      <%= current_link_to 'BTR Energy', '/btr-energy' %>
+      <%= current_link_to 'Transcriptic', '/transcriptic' %>
       <h6>For fun</h6>
       <a href='#'>fun 1</a>
       <a href='#'>fun 2</a>
       <a href='#'>fun 3</a>
       <a href='#'>fun 4</a>
-    </div>
+    </nav>
     <%= yield %>
     <div id='footer'></div>
   </body>
