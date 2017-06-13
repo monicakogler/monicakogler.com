@@ -32,8 +32,24 @@
         }
       });
     </script>
+    <script>
+      document.onreadystatechange = function () {
+        var state = document.readyState
+        if (state == 'interactive') {
+             document.getElementById('contents').style.visibility="hidden";
+        } else if (state == 'complete') {
+          setTimeout(function(){
+           document.getElementById('interactive');
+           document.getElementById('load').style.visibility="hidden";
+           document.getElementById('contents').style.visibility="visible";
+          },1000);
+        }
+      }
+    </script>
   </head>
   <body>
+    <div id='load' class='text-center'><span class='loading-helper'></span><img src='images/loading.gif' width='180' height='180' /></div>
+    <div id='contents'>
     <div id='header'>
       <a href='/' id='logo'><img src='images/logo@2x.png' width='48' height='48'/></a>
       <span onclick='openNav()' id='menu'><img src='images/menu.svg' width='48' height='48' /></span>
@@ -54,5 +70,6 @@
     </nav>
     <%= yield %>
     <div id='footer'></div>
+    </div id='contents'>
   </body>
 </html>

@@ -49,13 +49,6 @@ p {
 a {
   color: #222;
   text-decoration: none;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  &:focus,
-  &:hover {
-
-  }
 }
 
 a.btn {
@@ -68,65 +61,34 @@ a.btn {
   position: relative;
   line-height: 6rem;
   margin-bottom: 2.5rem;
-  outline: 1px solid transparent;
-  transition: all 0.3s;
-  // -webkit-transform-style: preserve-3d;
-  // -moz-transform-style: preserve-3d;
-  // transform-style: preserve-3d;
+}
+
+a.btn, a.btn:after {
+  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
 }
 
 a.btn:after {
-  content: "→";
+  content: "\0025B8";
   opacity: 0;
   top: 0;
   position: absolute;
   height: 100%;
   color: #fff;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
   font-size: 1.5rem;
   line-height: 6.125rem;
 }
 
-a.btn:hover:after {
-  opacity: 1;
-  padding-left: 2rem;
+a.btn:hover {
+  background: #000;
 }
 
-// a.btn:hover {
-//   -webkit-transform: rotateY(20deg);
-//   -moz-transform: rotateY(20deg);
-//   -ms-transform: rotateY(20deg);
-//   transform: rotateY(20deg);
-//   background: #222;
-// }
-//
-// a.btn:focus {
-//   background: #222;
-// }
-//
-// a.btn:after {
-//   width: 20%;
-//   height: 100%;
-//   left: -20%;
-//   top: 0;
-//   background: #111;
-//   -webkit-transform-origin: 100% 0%;
-//   -webkit-transform: rotateY(-90deg);
-//   -moz-transform-origin: 100% 0%;
-//   -moz-transform: rotateY(-90deg);
-//   -ms-transform-origin: 100% 0%;
-//   -ms-transform: rotateY(-90deg);
-//   transform-origin: 100% 0%;
-//   transform: rotateY(-90deg);
-//   content: '';
-//   position: absolute;
-//   z-index: -1;
-//   -webkit-transition: ease-in 0.4s;
-//   -moz-transition: ease-in 0.4s;
-//   transition: ease-in 0.4s;
-// }
+a.btn:hover:after {
+  opacity: 1;
+  padding-left: 1.5rem;
+}
 
 ul, menu, dir {
   display: block;
@@ -161,6 +123,23 @@ hr {
   padding-right: 1.5rem;
 }
 
+#load {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  img {
+    vertical-align: middle;
+  }
+}
+
+.loading-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
 
 // UTILITY CLASSES
 
@@ -191,15 +170,19 @@ hr {
   height: 5rem;
   width: 100%;
   z-index: 999;
-  -webkit-transition: all ease-in 0.2s;
-  -moz-transition: all ease-in 0.2s;
-  transition: all ease-in 0.2s;
+  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
 }
 
 @media only screen and (max-width: 860px) {
   #header.active {
     background: rgba(255,255,255,0.99);
     box-shadow: 0 5px 25px 0 rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 5px 25px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 5px 25px 0 rgba(0,0,0,0.1);
+    -o-box-shadow: 0 5px 25px 0 rgba(0,0,0,0.1);
   }
   #logo, #menu {
     top: 0.5rem;
@@ -228,8 +211,12 @@ hr {
   right: 0;
   background-image: linear-gradient(18deg, rgba(246,240,232,1) 0%, rgba(255,255,255,1) 100%);
   overflow-x: hidden;
-  transition: 0.4s;
   padding-top: 5rem;
+  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+
 }
 
 .sidenav h6 {
@@ -240,10 +227,6 @@ hr {
   padding: 0.75rem 0 0.75rem 5rem;
   text-decoration: none;
   display: block;
-  transition: 0.3s;
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 .sidenav .closebtn {
@@ -253,17 +236,17 @@ hr {
   padding: 0;
 }
 
-#main {
-  transition: margin-left 0.4s;
-  padding: 1rem;
-}
-
 [aria-current]:not([aria-current="false"]):before {
     position: absolute;
-    content: "→";
+    content: "\0025B8";
     font-size: 1.5rem;
-    line-height: 2.25rem;
-    left: 2.25rem;
+    line-height: 2.125rem;
+    left: 3.25rem;
+}
+
+.sidenav a:hover, [aria-current]:not([aria-current="false"]) {
+    color: #000;
+    font-weight: 700;
 }
 
 
@@ -282,6 +265,9 @@ hr {
 
 .intro img {
   box-shadow: 0 5px 25px 0 rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 5px 25px 0 rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 5px 25px 0 rgba(0,0,0,0.1);
+  -o-box-shadow: 0 5px 25px 0 rgba(0,0,0,0.1);
 }
 
 .what-i-do p {
@@ -291,7 +277,6 @@ hr {
 .what-i-do a.btn {
   margin-top: 1rem;
 }
-
 
 .role {
   padding-left: 2.5rem;
@@ -332,6 +317,9 @@ hr {
   img {
     height: auto;
     box-shadow: 0 5px 25px 0 rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 5px 25px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 5px 25px 0 rgba(0,0,0,0.1);
+    -o-box-shadow: 0 5px 25px 0 rgba(0,0,0,0.1);
     &:not(:last-of-type) {
       margin-bottom: 5rem;
     }
@@ -361,7 +349,7 @@ hr {
     display: block;
     margin: 0 auto 5rem;
     &.twist-product-logo {
-      max-width: 25rem;
+      max-width: 20rem;
     }
     &.twist-ss {
       max-width: 42.5rem;
