@@ -3,19 +3,17 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv='x-ua-compatible' content='ie=edge'>
-    <meta name='viewport'
-          content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-    <!-- Use the title from a page's frontmatter if it has one -->
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
     <title><%= current_page.data.title %></title>
     <%= stylesheet_link_tag 'site' %>
     <%= javascript_include_tag 'site' %>
     <link href='https://fonts.googleapis.com/css?family=Overpass:600,700' rel='stylesheet'>
     <script>
-      /* Set the width of the side navigation to 250px */
+      /* Set width of side navigation to 360px */
       function openNav() {
         document.getElementById('sidenav').style.width = '30rem';
       }
-      /* Set the width of the side navigation to 0 */
+      /* Set width of the side navigation to 0 */
       function closeNav() {
         document.getElementById('sidenav').style.width = '0';
       }

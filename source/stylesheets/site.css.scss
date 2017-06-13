@@ -6,6 +6,10 @@ html {
 
 body {
   background-image: linear-gradient(18deg, rgba(246,240,232,0.50) 0%, rgba(255,255,255,0.50) 100%);
+  background-image: -ms-linear-gradient(18deg, rgba(246,240,232,0.50) 0%, rgba(255,255,255,0.50) 100%);
+  background-image: -o-linear-gradient(18deg, rgba(246,240,232,0.50) 0%, rgba(255,255,255,0.50) 100%);
+  background-image: -moz-linear-gradient(18deg, rgba(246,240,232,0.50) 0%, rgba(255,255,255,0.50) 100%);
+  background-image: -webkit-linear-gradient(18deg, rgba(246,240,232,0.50) 0%, rgba(255,255,255,0.50) 100%);
   color: #222;
   font-family: 'Overpass', sans-serif;
   font-weight: 600;
@@ -210,6 +214,10 @@ hr {
   top: 0;
   right: 0;
   background-image: linear-gradient(18deg, rgba(246,240,232,1) 0%, rgba(255,255,255,1) 100%);
+  background-image: -ms-linear-gradient(18deg, rgba(246,240,232,1) 0%, rgba(255,255,255,1) 100%);
+  background-image: -o-linear-gradient(18deg, rgba(246,240,232,1) 0%, rgba(255,255,255,1) 100%);
+  background-image: -moz-linear-gradient(18deg, rgba(246,240,232,1) 0%, rgba(255,255,255,1) 100%);
+  background-image: -webkit-linear-gradient(18deg, rgba(246,240,232,1) 0%, rgba(255,255,255,1) 100%);
   overflow-x: hidden;
   padding-top: 5rem;
   transition: all ease 0.3s;
