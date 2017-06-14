@@ -55,15 +55,13 @@
     <nav id='sidenav' class='sidenav'>
       <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'><img src='images/close.svg' width='48' height='48' /></a>
       <%= link_to 'Home', '/' %>
-      <h6>For clients</h6>
+      <h6>Selected client work</h6>
       <%= current_link_to 'Twist', '/twist' %>
       <%= current_link_to 'Baggu', '/baggu' %>
       <%= current_link_to 'BTR Energy', '/btr-energy' %>
       <%= current_link_to 'Transcriptic', '/transcriptic' %>
-      <h6>For fun</h6>
-      <%= current_link_to 'Slow Fade', '/slow-fade' %>
-      <%= current_link_to 'Bye-Baby', '/bye-baby' %>
-      <%= current_link_to 'Sick n Tired Skyline', '/sick-n-tired-skyline' %>
+      <h6>Contact</h6>
+      <a href='mailto:monica@campsh.com'>Say hi</a>
     </nav>
     <%= yield %>
     <div id='footer'></div>
