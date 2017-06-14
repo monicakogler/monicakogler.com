@@ -376,3 +376,27 @@ hr {
     padding: 0 0 3rem;
   }
 }
+
+
+// VIDEO WORK TEMPLATE
+
+.video-work {
+  margin-top: 10rem;
+  h1 {
+    padding-top: 0;
+  }
+  iframe {
+    margin: 3rem auto 10rem auto;
+  }
+  iframe.hidden-xs {
+    @media only screen and (max-width: 590px) {
+      display: none;
+    }
+  }
+
+  iframe.visible-xs {
+    @media only screen and (min-width: 591px) {
+      display: none;
+    }
+  }
+}
