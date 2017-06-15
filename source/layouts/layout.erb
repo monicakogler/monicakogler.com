@@ -5,6 +5,14 @@
     <meta http-equiv='x-ua-compatible' content='ie=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
     <title><%= current_page.data.title %></title>
+    <meta name="description" content="Page description. No longer than 155 characters." />
+    <!-- Open Graph data -->
+    <meta property="og:title" content="It's me, Monica" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.monicakogler.com" />
+    <meta property="og:image" content="http://www.monicakogler.com/images/og.jpg" />
+    <meta property="og:description" content="Some work by Monica" />
+    <meta property="og:site_name" content="monicakogler.com" />
     <%= stylesheet_link_tag 'site' %>
     <%= javascript_include_tag 'site' %>
     <link href='https://fonts.googleapis.com/css?family=Overpass:600,700' rel='stylesheet'>
@@ -19,17 +27,6 @@
       }
     </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>
-      $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        if (scroll > 12) {
-          $('#header').addClass('active');
-        }
-        else {
-          $('#header').removeClass('active');
-        }
-      });
-    </script>
     <script>
       document.onreadystatechange = function () {
         var state = document.readyState
