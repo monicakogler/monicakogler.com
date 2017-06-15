@@ -46,15 +46,15 @@
     </script>
   </head>
   <body>
-    <div id='load' class='text-center'><span class='loading-helper'></span><img src='images/loading.gif' width='180' height='180' /></div>
+    <div id='load' class='text-center'><span class='loading-helper'></span><img src='/images/loading.gif' width='180' height='180' /></div>
     <div id='contents'>
     <div id='header'>
-      <a href='/' id='logo'><img src='images/logo@2x.png' width='48' height='48'/></a>
-      <span onclick='openNav()' id='menu'><img src='images/menu.svg' width='48' height='48' /></span>
+      <a href='/' id='logo'><img src='/images/logo@2x.png' width='48' height='48'/></a>
+      <span onclick='openNav()' id='menu'><img src='/images/menu.svg' width='48' height='48' /></span>
     </div>
     <nav id='sidenav' class='sidenav'>
-      <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'><img src='images/close.svg' width='48' height='48' /></a>
-      <%= link_to 'Home', '/' %>
+      <a href='javascript:void(0)' class='closebtn' onclick='closeNav()'><img src='/images/close.svg' width='48' height='48' /></a>
+      <%= current_link_to 'Home', '/' %>
       <h6>Selected client work</h6>
       <%= current_link_to 'Baggu', '/baggu' %>
       <%= current_link_to 'Twist', '/twist' %>

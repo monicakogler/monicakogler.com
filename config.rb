@@ -48,7 +48,7 @@ helpers do
     link_options = options
     current_path = current_page.url.to_s.gsub(FILE_EXTENSION, "")
 
-    if current_path.include? path
+    if current_path == path || current_path == path + '/'
       link_options.merge!("aria-current" => aria_current)
     end
 
